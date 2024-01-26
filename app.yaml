@@ -1,0 +1,15 @@
+runtime: nodejs20
+env: standard
+
+automatic_scaling:
+  min_idle_instances: automatic
+  max_idle_instances: 1
+  min_pending_latency: automatic
+  max_pending_latency: automatic
+  max_instances: 3
+
+instance_class: F1 # Choose an instance class (F1, F2, F4, etc.)
+
+env_variables:
+  NODE_ENV: "production"
+  CORSANYWHERE_WHITELIST: "https://stm-alpha.netlify.app,https://stm-dev.netlify.app,http://localhost:53609"
